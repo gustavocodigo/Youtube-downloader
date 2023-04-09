@@ -90,5 +90,16 @@ main{
 
 .download-div {
   border-radius: 20px;
+  border: 4px solid black;
   background-color: green;
 }
+
+.download-button{
+    border: 2px solid #FE523F;
+  padding: 18px;
+  background-color: #FE523F;
+   font-size: 1.02rem;
+  color: white;
+  transition: 0.5s;
+}
+
