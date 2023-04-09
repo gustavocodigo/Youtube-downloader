@@ -64,11 +64,10 @@ function convertClick() {
 
 
 function showVideoInfor(object) {
-  alert(object.name)
-  alert(object.thumbnail)
-  
-  
+  //alert(object.name)
+  //alert(object.thumbnail)
   const divElement = document.getElementById('downloads-div');
+  divElement.style.display = "block"
 divElement.style.backgroundImage = 'url('+object.thumbnail+'?timestamp=' + Date.now() + ')';
 
 }
@@ -84,6 +83,7 @@ function downloadVideo(url) {
 }
 
 function downloadClick() {
+  document.getElementById('downloads-div').styles.display = "none"
   downloadVideo(focusedLink)
   console.log("Downloading video...")
 }
