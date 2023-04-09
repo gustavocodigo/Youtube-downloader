@@ -58,9 +58,7 @@ main {
   color: gray;
 }
 
-.card-video-infor {
-  background-image: url(https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/3e0ecd30-2aee-475c-a558-f89caf656660.video_tumbnail.jpg?v=1681009149195);
-}
+
 
 .video_thumbnail {
   object-fit: cover;
@@ -89,27 +87,44 @@ main {
   color: red;
 }
 
-.download-div {
-  border-radius: 20px;
-  border: 4px solid black;
-  background-color: green;
+
+
+
+
+
+
+
+
+
+.card-video-infor {
+  background-image: url(https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/3e0ecd30-2aee-475c-a558-f89caf656660.video_tumbnail.jpg?v=1681009149195);
   
+  align-items: right;
+  width: 100%;
+    position: relative;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+
+
+
 
 .download-button {
   border: 2px solid #fe523f;
   padding: 18px;
   background-color: #fe523f;
-  font-size: 1.02rem;
   color: white;
-  transition: 0.5s;
-  
   margin-top: 10px;
   border-radius: 10px;
-   
+  width: 120px;
+  right: 0;
+  position: absolute;
+  font-size: 0.8rem;
 }
 
 .download-button:hover{
   cursor: pointer;
-  background-color: #ffffff;
+
 }
