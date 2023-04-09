@@ -19,7 +19,7 @@ main{
 
 .link_input {
   border: 2px solid #FE523F;
-  border-radius: 20px;
+  border-radius: 20px 0px 0 20px; ;
   padding: 24px;
   width: 100%;
   box-sizing: border-box;
@@ -27,3 +27,17 @@ main{
   
 }
 
+
+.button-start {
+   border: 2px solid #FE523F;
+  padding: 20px;
+  background-color: #FE523F;
+   font-size: 1.1rem;
+  color: white;
+}
+
+
+.button-start:hover {
+  cursor: pointer;
+ 
+}
