@@ -51,14 +51,17 @@ function convertClick() {
 }
 
 function downloadVideo(url) {
-  const fileName = "video.mp4"; // nome do arquivo a ser salvo
+   // cria um link com a URL do vídeo
   const link = document.createElement("a");
-  link.href = url;
-  link.download = fileName;
+  link.href = `https://spicy-stirring-leptoceratops.glitch.me/?url=${url}`;
+  // adiciona a propriedade "download" para iniciar o download quando o usuário clicar no link
+  link.download = "video.mp4";
+  // simula o clique no link para iniciar o download
   link.click();
 }
 
 function downloadClick() {
   downloadVideo(focusedLink)
+  console.log("Downloading video...")
 }
 
