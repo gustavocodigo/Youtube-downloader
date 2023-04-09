@@ -6,11 +6,24 @@ body{
 
 
 header{
-  background-color: gray;
-  padding: 20px;
+  background-color: #FE523F;
+  padding: 30px;
+  color: white;
 }
 
 main{
-  padding: 20px;
+  padding: 30px;
   font-size: 1.3rem;
 }
+
+
+.link_input {
+  border: 2px solid #FE523F;
+  border-radius: 20px;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 15px;
+  
+}
+
