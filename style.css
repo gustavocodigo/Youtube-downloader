@@ -2,6 +2,7 @@ body{
   background-color: white;
   padding: 0;
   margin: 0;
+  
 }
 
 
@@ -14,11 +15,12 @@ header{
 main{
   padding: 30px;
   font-size: 1.3rem;
+  text-align: center;
 }
 
 
 .link_input {
-  border: 5px solid #FE523F;
+  border: 2px solid #FE523F;
   border-radius: 20px 0px 0 20px; ;
   padding: 24px;
   width: 100%;
@@ -29,7 +31,7 @@ main{
 
 
 .button-start {
-   border: 5px solid #FE523F;
+   border: 2px solid #FE523F;
   padding: 20px;
   background-color: #FE523F;
    font-size: 1.02rem;
@@ -40,4 +42,8 @@ main{
 .button-start:hover {
   cursor: pointer;
  
+}
+
+.instructions {
+  text-align: left;
 }
