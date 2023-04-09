@@ -18,21 +18,21 @@ main{
 
 
 .link_input {
-  border: 2px solid #FE523F;
+  border: 5px solid #FE523F;
   border-radius: 20px 0px 0 20px; ;
   padding: 24px;
   width: 100%;
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 1.2rem;
   
 }
 
 
 .button-start {
-   border: 2px solid #FE523F;
+   border: 5px solid #FE523F;
   padding: 20px;
   background-color: #FE523F;
-   font-size: 1.1rem;
+   font-size: 1.02rem;
   color: white;
 }
 
