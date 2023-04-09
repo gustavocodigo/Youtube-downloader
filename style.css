@@ -7,7 +7,9 @@ body{
 
 
 header{
-  background-color: #FE523F;
+/*   background-color: #FE523F; */
+  background: rgb(237,102,102);
+background: linear-gradient(68deg, rgba(237,102,102,1) 0%, rgba(243,74,55,1) 100%, rgba(250,26,0,0.8847710959383753) 100%);
   padding: 30px;
   color: white;
   text-transform: uppercase;
@@ -70,3 +72,16 @@ main{
   border-radius: 10px;
 }
 
+
+@keyframes aniname{
+  0% {transform: translate(0,0)}
+  50% {transform: translate(-10px,0)}
+  75% {transform: translate(10px,0)}
+  100% {transform: translate(10px,0)}
+}
+
+.error-input-div {
+  animation-name:aniname;
+  animation-duration: 0.6s;
+  color: red;
+}

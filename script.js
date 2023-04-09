@@ -37,6 +37,11 @@ function convertClick() {
   if( isValidYoutubeVideoLink(input_url)) {
     search_video(input_url)
   }else{
-    alert("Invalid youtube link")
+
+     document.getElementById("input-div").classList.add("error-input-div")
+    setTimeout(function() {
+          document.getElementById("input-div").classList.remove("error-input-div")
+    }, 2000)
+  
   }
 }
