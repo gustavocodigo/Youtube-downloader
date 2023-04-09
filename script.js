@@ -1,6 +1,9 @@
 let focusedLink = ""
 let lastVideoName = "video.mp4"
 
+let api_url = "https://youtube-downloader-api2.glitch.me/"
+
+
 
 function isValidYoutubeVideoLink(link) {
   // Expressão regular para validar um link de vídeo do YouTube
@@ -41,7 +44,7 @@ function search_video(url) {
   locked = true
   
   
-  fetch('https://spicy-stirring-leptoceratops.glitch.me/video-info?url='+url, {
+  fetch(api_url+'/video-info?url='+url, {
   headers: {
     'User-Agent': 'Mozilla'
   }
@@ -90,7 +93,7 @@ divElement.style.backgroundImage = 'url('+object.thumbnail+')'
 function downloadVideo(url) {
    // cria um link com a URL do vídeo
   const link = document.createElement("a");
-  link.href = `https://spicy-stirring-leptoceratops.glitch.me//downlaod-video?url=${url}`;
+  link.href = api_url+`/downlaod-video?url=${url}`;
   // adiciona a propriedade "download" para iniciar o download quando o usuário clicar no link
   link.download = lastVideoName+".mp4";
   // simula o clique no link para iniciar o download
