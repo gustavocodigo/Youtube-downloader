@@ -1,18 +1,30 @@
 let focusedLink = ""
+let lastVideoName = "video.mp4"
 
 
 function isValidYoutubeVideoLink(link) {
   // Expressão regular para validar um link de vídeo do YouTube
-  var regex = /^(https?\:\/\/)?(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9\-_]{11})$/
+  var regex =
+    /^(https?\:\/\/)?(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9\-_]{11})$/;
 
   // Verifica se o link corresponde ao padrão da expressão regular
-  return regex.test(link)
+  return (
+    regex.test(link) || /^https?:\/\/youtu\.be\/[a-zA-Z0-9\-_]{11}$/.test(link)
+  );
 }
 
 
+function converterUrlYoutube(url) {
+  const regex = /^https?:\/\/(?:www\.)?youtu\.be\/(.+)$/i;
+  const match = url.match(regex);
 
+  if (match) {
+    const videoId = match[1];
+    return `https://www.youtube.com/watch?v=${videoId}`;
+  }
 
-
+  return url;
+}
 
 
 
@@ -22,8 +34,8 @@ function isValidYoutubeVideoLink(link) {
 
 let locked = false
 
-function search_video(url)
-{
+function search_video(url) {
+  url = converterUrlYoutube(url)
   if (locked) return
   
   locked = true
@@ -77,7 +89,7 @@ divElement.style.backgroundImage = 'url('+object.thumbnail+')'
 function downloadVideo(url) {
    // cria um link com a URL do vídeo
   const link = document.createElement("a");
-  link.href = `https://spicy-stirring-leptoceratops.glitch.me/?url=${url}`;
+  link.href = `https://spicy-stirring-leptoceratops.glitch.me//downlaod-video?url=${url}`;
   // adiciona a propriedade "download" para iniciar o download quando o usuário clicar no link
   link.download = "video.mp4";
   // simula o clique no link para iniciar o download
