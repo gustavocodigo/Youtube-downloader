@@ -63,7 +63,8 @@ main{
 
 .card-video-infor{
   box-sizing: border-box;
-
+  width: 600px;
+  margin
   
 }
 
@@ -92,6 +93,7 @@ main{
   border-radius: 20px;
   border: 4px solid black;
   background-color: green;
+  
 }
 
 .download-button{
