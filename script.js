@@ -41,13 +41,14 @@ function search_video(url)
   
   document.getElementById("loading-search").style.display = "block"
   setTimeout(function() {
-    document.getElementById("loading-search").style.display = "none"
+    
     locked = false
   }, 3000)
 }
 
 
 function convertClick() {
+   document.getElementById('downloads-div').style.display = "none"
   let input_url = document.getElementById("url-link").value
   if( isValidYoutubeVideoLink(input_url)) {
     search_video(input_url)
@@ -68,6 +69,7 @@ function showVideoInfor(object) {
   //alert(object.thumbnail)
   const divElement = document.getElementById('downloads-div');
   divElement.style.display = "block"
+  document.getElementById("loading-search").style.display = "none"
 divElement.style.backgroundImage = 'url('+object.thumbnail+'?timestamp=' + Date.now() + ')';
 
 }
@@ -83,7 +85,7 @@ function downloadVideo(url) {
 }
 
 function downloadClick() {
-  document.getElementById('downloads-div').styles.display = "none"
+ 
   downloadVideo(focusedLink)
   console.log("Downloading video...")
 }
