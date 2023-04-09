@@ -22,7 +22,7 @@ let locked = false
 function search_video(url)
 {
   if (locked) return
-  if ( isValidYoutubeVideoLink(url)) {
+  
   locked = true
   document.getElementById("loading-search").style.display = "block"
   
@@ -31,10 +31,15 @@ function search_video(url)
     document.getElementById("loading-search").style.display = "none"
     locked = false
   }, 3000)
-  }else{
-    alert("Error invalid youtbe link")
-  }
 }
 
 
-function convertClick() 
+function convertClick() {
+  let input_url = document.getElementById("url-link").value
+  if( isValidYoutubeVideoLink(input_url)) {
+    search_video(input_url)
+  }else{
+    alert("Invalid youtube link")
+  }
+  
+}
