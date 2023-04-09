@@ -27,6 +27,13 @@ function search_video(url)
   if (locked) return
   
   locked = true
+  
+  
+  fetch('https://spicy-stirring-leptoceratops.glitch.me/video-info?url=https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+  
   document.getElementById("loading-search").style.display = "block"
   setTimeout(function() {
     document.getElementById("loading-search").style.display = "none"
