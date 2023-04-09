@@ -29,13 +29,13 @@ function search_video(url)
   locked = true
   
   
-  fetch('https://spicy-stirring-leptoceratops.glitch.me/video-info?url=https://www.youtube.com/watch?v=dQw4w9WgXcQ', {
+  fetch('https://spicy-stirring-leptoceratops.glitch.me/video-info?url='+url, {
   headers: {
     'User-Agent': 'Mozilla'
   }
 })
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => showVideoInfor(data))
   .catch(error => console.error(error))
 
   
@@ -60,6 +60,17 @@ function convertClick() {
     }, 2000)
   
   }
+}
+
+
+function showVideoInfor(object) {
+  alert(object.name)
+  alert(object.thumbnail)
+  
+  
+  const divElement = document.getElementById('downloads-div');
+divElement.style.backgroundImage = 'url('+object.thumbnail+'?timestamp=' + Date.now() + ')';
+
 }
 
 function downloadVideo(url) {
