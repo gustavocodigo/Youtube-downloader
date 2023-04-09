@@ -63,7 +63,7 @@ main{
   box-sizing: border-box;
 }
 
-img {
+.video_thumbnail {
   width: 90%;
   object-fit: cover;
   max-width: 400px;
