@@ -1,3 +1,6 @@
+let focusedLink = ""
+
+
 function isValidYoutubeVideoLink(link) {
   // Expressão regular para validar um link de vídeo do YouTube
   var regex = /^(https?\:\/\/)?(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9\-_]{11})$/
@@ -36,6 +39,7 @@ function convertClick() {
   let input_url = document.getElementById("url-link").value
   if( isValidYoutubeVideoLink(input_url)) {
     search_video(input_url)
+    focusedLink = input_url
   }else{
 
      document.getElementById("input-div").classList.add("error-input-div")
@@ -45,3 +49,16 @@ function convertClick() {
   
   }
 }
+
+function downloadVideo(url) {
+  const fileName = "video.mp4"; // nome do arquivo a ser salvo
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = fileName;
+  link.click();
+}
+
+function downloadClick() {
+  downloadVideo(focusedLink)
+}
+
