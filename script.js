@@ -25,8 +25,6 @@ function search_video(url)
   
   locked = true
   document.getElementById("loading-search").style.display = "block"
-  
-  
   setTimeout(function() {
     document.getElementById("loading-search").style.display = "none"
     locked = false
@@ -41,5 +39,4 @@ function convertClick() {
   }else{
     alert("Invalid youtube link")
   }
-  
 }
