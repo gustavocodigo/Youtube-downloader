@@ -10,6 +10,8 @@ header{
   background-color: #FE523F;
   padding: 30px;
   color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
 main{
@@ -25,7 +27,7 @@ main{
 .link_input {
   border: 2px solid #FE523F;
   border-radius: 20px 0px 0 20px; ;
-  padding: 20px;
+  padding: 18px;
   width: 100%;
   box-sizing: border-box;
   font-size: 1.2rem;
@@ -35,7 +37,7 @@ main{
 
 .button-start {
    border: 2px solid #FE523F;
-  padding: 20px;
+  padding: 18px;
   background-color: #FE523F;
    font-size: 1.02rem;
   color: white;
@@ -52,4 +54,6 @@ main{
 
 .instructions {
   text-align: left;
+  color: gray;
+  
 }
