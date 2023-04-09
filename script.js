@@ -80,6 +80,7 @@ function showVideoInfor(object) {
   //alert(object.name)
   //alert(object.thumbnail)
   const divElement = document.getElementById('downloads-div');
+  lastVideoName = object.name
   divElement.style.display = "block"
   document.getElementById("loading-search").style.display = "none"
 divElement.style.backgroundImage = 'url('+object.thumbnail+')'
@@ -91,7 +92,7 @@ function downloadVideo(url) {
   const link = document.createElement("a");
   link.href = `https://spicy-stirring-leptoceratops.glitch.me//downlaod-video?url=${url}`;
   // adiciona a propriedade "download" para iniciar o download quando o usuário clicar no link
-  link.download = "video.mp4";
+  link.download = lastVideoName+".mp4";
   // simula o clique no link para iniciar o download
   link.click();
 }
