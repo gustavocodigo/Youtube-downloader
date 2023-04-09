@@ -70,7 +70,7 @@ function showVideoInfor(object) {
   const divElement = document.getElementById('downloads-div');
   divElement.style.display = "block"
   document.getElementById("loading-search").style.display = "none"
-divElement.style.backgroundImage = 'url('+object.thumbnail+'?timestamp=' + Date.now() + ')';
+divElement.style.backgroundImage = 'url('+object.thumbnail+')'
 
 }
 

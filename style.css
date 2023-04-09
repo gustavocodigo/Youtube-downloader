@@ -102,9 +102,13 @@ main {
   align-items: right;
   width: 100%;
     position: relative;
-  height: 200px;
+  height: 290px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  max-width: 400px;
+  margin-left: auto;
+   margin-right: auto;
 }
 
 
@@ -113,15 +117,15 @@ main {
 
 .download-button {
   border: 2px solid #fe523f;
-  padding: 18px;
+  padding: 10px;
   background-color: #fe523f;
   color: white;
   margin-top: 10px;
-  border-radius: 10px;
-  width: 120px;
+  border-radius: 4px;
+  width: 170px;
   right: 0;
   position: absolute;
-  font-size: 0.8rem;
+  font-size:1rem;
 }
 
 .download-button:hover{
