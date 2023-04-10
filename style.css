@@ -111,6 +111,7 @@ main {
   margin-left: auto;
    margin-right: auto;
   border-radius: 2px;
+ filter: blur(5px);
 }
 
 
@@ -120,7 +121,7 @@ main {
 .download-button {
   border: 0px solid #fe523f;
   padding: 10px;
-  background-color: DodgerBlue;
+  background-color:  #fe523f;
   color: white;
   margin-top: 10px;
   border-radius: 4px;
