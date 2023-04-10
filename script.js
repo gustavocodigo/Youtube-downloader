@@ -87,6 +87,8 @@ function showVideoInfor(object) {
   divElement.style.display = "block"
   document.getElementById("loading-search").style.display = "none"
 divElement.style.backgroundImage = 'url('+object.thumbnail+')'
+  
+  document.getElementById("video-name").innerText = object.name
 
 }
 
@@ -96,6 +98,7 @@ function downloadVideo(url) {
   link.href = api_url+`/downlaod-video?url=${url}`;
   // adiciona a propriedade "download" para iniciar o download quando o usuário clicar no link
   link.download = lastVideoName+".mp4";
+  
   // simula o clique no link para iniciar o download
   link.click();
 }
