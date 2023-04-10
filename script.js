@@ -63,7 +63,7 @@ function search_video(url) {
 
 
 function convertClick() {
-   document.getElementById('downloads-div').style.display = "none"
+   document.getElementById('video-card').style.display = "none"
   let input_url = document.getElementById("url-link").value
   if( isValidYoutubeVideoLink(input_url)) {
     search_video(input_url)
@@ -82,11 +82,11 @@ function convertClick() {
 function showVideoInfor(object) {
   //alert(object.name)
   //alert(object.thumbnail)
-  const divElement = document.getElementById('downloads-div');
+  const divElement = document.getElementById('video-card');
   lastVideoName = object.name
   divElement.style.display = "block"
   document.getElementById("loading-search").style.display = "none"
-divElement.style.backgroundImage = 'url('+object.thumbnail+')'
+document.getElementById("thumbnail-div").style.backgroundImage = 'url('+object.thumbnail+')'
   
   document.getElementById("video-name").innerText = object.name
 

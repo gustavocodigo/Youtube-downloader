@@ -97,15 +97,13 @@ main {
 
 
 .card-video-infor {
-  background-image: url(https://i.ytimg.com/vi/J95BwC1BVOk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCZYClip_mEzF4NJQXez6ozBTDW2w5);
-  
+ 
   align-items: right;
   width: 100%;
     position: relative;
   height: 250px;
-  background-color: black;
-  background-repeat: no-repeat;
-  background-size: contain;
+  
+
   background-position: center;
   max-width: 400px;
   margin-left: auto;
@@ -131,7 +129,7 @@ main {
   font-size:0.8rem;
   bottom: 0;
   border-radius: 20px;
-  z-index: 99;
+  z-index: 10;
 }
 
 .download-button:hover{
@@ -144,6 +142,9 @@ main {
   width: 100%;
   height: 90%;
   position: absolute;
-  background-color: black;
+  background-color: white;
  filter: blur(5px);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
 }
