@@ -5,8 +5,23 @@ body {
   text-align: center;
 }
 
+
+
+
+
+@font-face {
+
+  font-family: headerFont ;
+
+  src: url(https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/AUSTRALIA-TITLE.otf?v=1681102653695);
+
+}
+
+
 header {
-  /*   background-color: #FE523F; */
+  font-family: headerFont;
+  letter-spacing: 0.4em;
+ /*   background-color: #FE523F; */
   background: rgb(237, 102, 102);
   background: linear-gradient(
     68deg,
@@ -17,12 +32,12 @@ header {
   padding: 30px;
   color: white;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 main {
   padding: 30px;
-  font-size: 1.3rem;
+  
   text-align: center;
   max-width: 1000px;
   margin-left: auto;
