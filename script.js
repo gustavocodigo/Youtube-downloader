@@ -109,7 +109,7 @@ function downloadVideo(url) {
 
 
 
-function downloadVideo2(videoUrl) {
+function gotoURL(videoUrl) {
   const a = document.createElement('a');
   a.href = videoUrl;
   a.download = 'video.mp4';
@@ -137,7 +137,7 @@ function downloadVideo3(videoUrl) {
 
 function downloadClick() {
  
-  downloadVideo3(lastVideoObject.videoUrl)
+  gotoURL(lastVideoObject.videoUrl)
   console.log(lastVideoObject.videoUrl)
   
   // console.log("Downloading video...")
