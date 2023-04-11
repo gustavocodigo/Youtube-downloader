@@ -1,6 +1,6 @@
 let focusedLink = ""
 let lastVideoName = "video.mp4"
-
+let lastVideoObject;
 let api_url = "https://youtube-downloader-api2.glitch.me/"
 
 
@@ -80,6 +80,8 @@ function convertClick() {
 
 
 function showVideoInfor(object) {
+  console.log(object)
+  lastVideoObject = object
   //alert(object.name)
   //alert(object.thumbnail)
   const divElement = document.getElementById('video-card');
@@ -95,7 +97,7 @@ document.getElementById("thumbnail-div").style.backgroundImage = 'url('+object.t
 function downloadVideo(url) {
    // cria um link com a URL do vídeo
   const link = document.createElement("a");
-  link.href = api_url+`/downlaod-video?url=${url}`;
+  link.href = url;// api_url+`/downlaod-video?url=${url}`;
   // adiciona a propriedade "download" para iniciar o download quando o usuário clicar no link
   link.download = lastVideoName+".mp4";
   
@@ -103,9 +105,41 @@ function downloadVideo(url) {
   link.click();
 }
 
+
+
+
+
+function downloadVideo2(videoUrl) {
+  const a = document.createElement('a');
+  a.href = videoUrl;
+  a.download = 'video.mp4';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+
+function downloadVideo3(videoUrl) {
+  fetch(videoUrl)
+    .then(response => response.blob())
+    .then(blob => {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'video.mp4';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+}
+
+
 function downloadClick() {
  
-  downloadVideo(focusedLink)
-  console.log("Downloading video...")
+  downloadVideo3(lastVideoObject.videoUrl)
+  console.log(lastVideoObject.videoUrl)
+  
+  // console.log("Downloading video...")
 }
 
