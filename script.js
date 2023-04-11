@@ -138,8 +138,19 @@ function downloadVideo3(videoUrl) {
 function downloadClick() {
  
   gotoURL(lastVideoObject.videoUrl)
+  // gotoURL(lastVideoObject.audioUrl)
+  
   console.log(lastVideoObject.videoUrl)
   
   // console.log("Downloading video...")
 }
 
+function downloadClick2() {
+ 
+  // gotoURL(lastVideoObject.videoUrl)
+  gotoURL(lastVideoObject.audioUrl)
+  
+  console.log(lastVideoObject.videoUrl)
+  
+  // console.log("Downloading video...")
+}
