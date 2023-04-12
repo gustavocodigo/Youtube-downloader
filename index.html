@@ -8,7 +8,10 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/43eb17cb-e1cd-4422-9473-ee940386d8c6.pngwing.com.png?v=1681086811193o" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/43eb17cb-e1cd-4422-9473-ee940386d8c6.pngwing.com.png?v=1681086811193o"
+    />
 
     <!--
       This is the page head - it contains info the browser uses
@@ -26,15 +29,20 @@
   <body>
     <header>
       <div style="display: flex">
-        <img style="padding-top:8px;" width= "50" height="50" src="https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/fb76a160-28c2-4023-8047-0c463ec5a93b.image-removebg-preview.png?v=1681087167706">
-      
-        <h2 style="padding-left: 25px;">YOU</h2>
-        <h2 style="color: black;">DOWNLOADER</h2>
+        <img
+          style="padding-top: 8px"
+          width="50"
+          height="50"
+          src="https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/fb76a160-28c2-4023-8047-0c463ec5a93b.image-removebg-preview.png?v=1681087167706"
+        />
+
+        <h2 style="padding-left: 25px">YOU</h2>
+        <h2 style="color: black">DOWNLOADER</h2>
       </div>
     </header>
     <main>
       <h2>Baixar vídeos</h2>
-      <p style="text-align: left;">
+      <p style="text-align: left">
         Baixe vídeos e músicas do YouTube facilmente! Cole o link do vídeo ou
         música em nossa plataforma e comece o download imediatamente. Sem
         instalar software ou navegar por páginas intermináveis. Com nossa
@@ -70,32 +78,35 @@
         />
       </div>
 
-      <div
-         id="video-card"
-        class="card-video-infor"
-          
-           style="display: none;"
-      >
-        
-        
-        
-        
-        
-        <div class = "thumbnail-div" id = "thumbnail-div">
-          
-        </div>
-        
-        
-       
-        
-        
-        <div
-            
-          style="display: flex; margin: 10px; flex-direction: column"
-        >
-          <p style="font-size: 0.8rem;color: white; text-align: left; background-color:#0000009F; padding: 20px; border-radius: 10px;z-index: 10 " id ="video-name">
+      <div id="video-card" class="card-video-infor" style="display: none">
+        <div class="thumbnail-div" id="thumbnail-div"></div>
+
+        <div style="display: flex; margin: 10px; flex-direction: column">
+          <p
+            style="
+              font-size: 0.8rem;
+              color: white;
+              text-align: left;
+              background-color: #0000009f;
+              padding: 20px;
+              border-radius: 10px;
+              z-index: 10;
+            "
+            id="video-name"
+          >
             Video name haha 2020
           </p>
+
+          <div
+         
+            
+          >
+            <iframe
+              id="video-iframe"
+              class="ideo-iframe"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            ></iframe>
+          </div>
           <div class="download-button" onclick="downloadClick()">
             GO TO <b>VIDEO</b>
             <svg
@@ -111,7 +122,7 @@
               />
             </svg>
           </div>
-          
+
           <div class="download-button" onclick="downloadClick2()">
             GO TO <b>AUDIO</b>
             <svg
@@ -127,15 +138,9 @@
               />
             </svg>
           </div>
-         <div  class="videos-iframe" >
-            <iframe class="video-iframe" id="video-iframe" src=" "></iframe>
-          </div>
-        
         </div>
       </div>
-    
-        
-      
+
       <hr style="margin-top: 60px" />
       <div>
         <ol class="instructions">
@@ -147,10 +152,6 @@
           <li>Volte neste site e coloque o link do video no campo.</li>
         </ol>
       </div>
-      
-      
-      
-     
     </main>
     <footer class="footer"></footer>
   </body>
