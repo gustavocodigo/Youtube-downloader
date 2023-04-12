@@ -1,7 +1,7 @@
 let focusedLink = ""
 let lastVideoName = "video.mp4"
 let lastVideoObject;
-let api_url = "https://youtube-downloader-api2.glitch.me/"
+let api_url = "https://youtube-downloader-api2.glitch.me"
 
 
 
@@ -9,9 +9,21 @@ let api_url = "https://youtube-downloader-api2.glitch.me/"
 
 
 function updateUserCount() {
-  
+  fetch(api_url+'/usercount', {
+  headers: {
+    'User-Agent': 'Mozilla'
+  }
+})
+  .then(response => response.json())
+  .then( function(data) {
+    let user_count = data["user-count"]
+    document.getElementById("vizucount").innerText = user_count
+  })
+  .catch(error => console.error(error))
 }
 
+
+setTimeout(updateUserCount, 1000)
 
 function isValidYoutubeVideoLink(link) {
   // Expressão regular para validar um link de vídeo do YouTube
@@ -30,8 +42,6 @@ function converterUrlYoutube(url) {
   console.log(id)
   return `https://www.youtube.com/watch?v=${id}`;
 }
-
-
 
 
 
