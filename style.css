@@ -123,11 +123,11 @@ box-shadow: 0px 11px 11px -1px #000000; */
   align-items: right;
   width: 100%;
     position: relative;
-  height: 450px;
+  height: 250px;
   
 
   background-position: center;
-  min-width: 400px;
+  max-width: 400px;
   margin-left: auto;
    margin-right: auto;
   border-radius: 2px;
@@ -169,14 +169,4 @@ box-shadow: 0px 11px 11px -1px #000000; */
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
-}
-
-.videos-iframe {
-
-}
-
-.video-iframe {
-  max-width: 90%;
-  height: 400px;
-  z-index: 99;
 }
