@@ -76,7 +76,7 @@ function search_video(url) {
 
 function convertClick() {
    document.getElementById('video-card').style.display = "none"
-  let input_url = document.getElementById("url-link").value
+  let input_url = document.getElementById("id_url").value
   if( validateURL(input_url)) {
     search_video(input_url)
     focusedLink = input_url
