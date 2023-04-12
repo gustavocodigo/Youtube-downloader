@@ -5,6 +5,14 @@ let api_url = "https://youtube-downloader-api2.glitch.me/"
 
 
 
+
+
+
+function updateUserCount() {
+  
+}
+
+
 function isValidYoutubeVideoLink(link) {
   // Expressão regular para validar um link de vídeo do YouTube
   var regex =
