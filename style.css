@@ -21,7 +21,7 @@ body {
 
 header {
   font-family: headerFont;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.3em;
  /*   background-color: #FE523F; */
   background: rgb(237, 102, 102);
   background: linear-gradient(
@@ -34,7 +34,7 @@ header {
   padding-left: 20px;
   color: white;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   
 }
 

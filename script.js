@@ -23,7 +23,7 @@ function updateUserCount() {
 }
 
 
-setTimeout(updateUserCount, 1000)
+setTimeout(updateUserCount, 0)
 
 function isValidYoutubeVideoLink(link) {
   // Expressão regular para validar um link de vídeo do YouTube
@@ -231,3 +231,13 @@ function validateURL(string) {
     return false;
   }
 }
+
+
+
+
+
+
+
+
+
+
