@@ -141,19 +141,21 @@ box-shadow: 0px 11px 11px -1px #000000; */
 .download-button {
   border: 0px solid #fe523f;
   padding: 10px;
-  background-color:   #fe5239;
-  color: white;
+  background-color:   #00000099;
+  color: #9F9F9FFF;
   margin-top: 10px;
   border-radius: 4px;
   width: 130px;
   right: 0;
   margin-left: auto;
-  font-size:0.8rem;
+  font-size:0.75rem;
   bottom: 0;
-  border-radius: 20px;
+  border-radius: 10px;
   z-index: 10;
   
-  border-bottom: 5px solid #fe5239;
+  border-bottom: 5px solid #00000029;
+  
+  text-decoration: underline;
 }
 
 .download-button:hover{
