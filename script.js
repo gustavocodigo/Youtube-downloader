@@ -6,27 +6,13 @@ let api_url = "https://youtube-downloader-api2.glitch.me/"
 
 
 function isValidYoutubeVideoLink(link) {
-  // Expressão regular para validar um link de vídeo do YouTube
-  var regex =
-    /^(https?\:\/\/)?(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9\-_]{11})$/;
-
-  // Verifica se o link corresponde ao padrão da expressão regular
-  return (
-    regex.test(link) || /^https?:\/\/youtu\.be\/[a-zA-Z0-9\-_]{11}$/.test(link)
-  );
+ 
+  return validateURL(link)
 }
 
 
-function converterUrlYoutube(url) {
-  const regex = /^https?:\/\/(?:www\.)?youtu\.be\/(.+)$/i;
-  const match = url.match(regex);
-
-  if (match) {
-    const videoId = match[1];
-    return `https://www.youtube.com/watch?v=${videoId}`;
-  }
-
-  return url;
+function converterUrlYoutube(id) {
+  return `https://www.youtube.com/watch?v=${id}`
 }
 
 
@@ -38,7 +24,7 @@ function converterUrlYoutube(url) {
 let locked = false
 
 function search_video(url) {
-  url = converterUrlYoutube(url)
+  url = converterUrlYoutube(getURLVideoID(url))
   if (locked) return
   
   locked = true
@@ -77,7 +63,7 @@ function convertClick() {
   
   }
   
-  console.log( extractVideoId(input_url))
+  console.log( validateURL(input_url))
 }
 
 
@@ -160,11 +146,7 @@ function downloadClick2() {
 
 
 
-
-
-
-// by chat gpt
-const VALID_YOUTUBE_DOMAINS = new Set([
+const validQueryDomains = new Set([
   'youtube.com',
   'www.youtube.com',
   'm.youtube.com',
@@ -172,31 +154,58 @@ const VALID_YOUTUBE_DOMAINS = new Set([
   'gaming.youtube.com',
 ]);
 
-const VALID_YOUTUBE_URL_REGEX = /^https?:\/\/(youtu\.be\/|(www\.)?youtube\.com\/(embed|v|shorts)\/)/;
+const validPathDomains = /^https?:\/\/(youtu\.be\/|(www\.)?youtube\.com\/(embed|v|shorts)\/)/;
 
-const YOUTUBE_VIDEO_ID_REGEX = /^[a-zA-Z0-9_-]{11}$/;
+const idRegex = /^[a-zA-Z0-9-_]{11}$/;
 
-function extractVideoId(url) {
-  const parsedUrl = new URL(url);
-
-  if (!VALID_YOUTUBE_DOMAINS.has(parsedUrl.hostname) || !VALID_YOUTUBE_URL_REGEX.test(url)) {
-    return false;
-  }
-
-  let videoId = parsedUrl.searchParams.get('v');
-
-  if (!videoId) {
-    const paths = parsedUrl.pathname.split('/');
-    videoId = parsedUrl.hostname === 'youtu.be' ? paths[1] : paths[2];
-  }
-
-  if (!videoId) {
-    return false;
-  }
-
-  if (!YOUTUBE_VIDEO_ID_REGEX.test(videoId)) {
-    return false;
-  }
-
-  return videoId;
+function validateID(id) {
+  return idRegex.test(id);
 }
+
+function getURLVideoID(link) {
+  const parsed = new URL(link);
+  let id = parsed.searchParams.get('v');
+  if (validPathDomains.test(link) && !id) {
+    const paths = parsed.pathname.split('/');
+    id = parsed.host === 'youtu.be' ? paths[1] : paths[2];
+  } else if (parsed.hostname && !validQueryDomains.has(parsed.hostname)) {
+    throw Error('Not a YouTube domain');
+  }
+  if (!id) {
+    throw Error(`No video id found: ${link}`);
+  }
+  id = id.substring(0, 11);
+  if (!validateID(id)) {
+    throw TypeError(`Video id (${id}) does not match expected ` +
+      `format (${idRegex.toString()})`);
+  }
+  return id;
+}
+
+const urlRegex = /^https?:\/\//;
+
+function getVideoID(str) {
+  if (validateID(str)) {
+    return str;
+  } else if (urlRegex.test(str)) {
+    return getURLVideoID(str);
+  } else {
+    throw Error(`No video id found: ${str}`);
+  }
+}
+
+function validateURL(string) {
+  try {
+    getURLVideoID(string);
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+
+
+
+
+
+
