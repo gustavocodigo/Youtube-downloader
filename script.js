@@ -76,7 +76,7 @@ function showVideoInfor(object) {
   lastVideoName = object.name
   divElement.style.display = "block"
   document.getElementById("loading-search").style.display = "none"
-document.getElementById("thumbnail-div").style.backgroundImage = 'url('+object.thumbnail+')'
+// document.getElementById("thumbnail-div").style.backgroundImage = 'url('+object.thumbnail+')'
   
   document.getElementById("video-name").innerText = object.name
   document.getElementById("video-iframe").src = object.videoUrl
