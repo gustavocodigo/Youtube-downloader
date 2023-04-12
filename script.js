@@ -56,7 +56,7 @@ function search_video(url) {
   locked = true
   
   
-  fetch(api_url+'/video-info?url='+url, {
+  fetch(api_url+'/video-info?url='+encodeURIComponent(url), {
   headers: {
     'User-Agent': 'Mozilla'
   }
