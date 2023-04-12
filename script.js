@@ -76,6 +76,8 @@ function convertClick() {
     }, 2000)
   
   }
+  
+  console.log( extractVideoId(input_url))
 }
 
 
@@ -153,4 +155,48 @@ function downloadClick2() {
   console.log(lastVideoObject.videoUrl)
   
   // console.log("Downloading video...")
+}
+
+
+
+
+
+
+
+// by chat gpt
+const VALID_YOUTUBE_DOMAINS = new Set([
+  'youtube.com',
+  'www.youtube.com',
+  'm.youtube.com',
+  'music.youtube.com',
+  'gaming.youtube.com',
+]);
+
+const VALID_YOUTUBE_URL_REGEX = /^https?:\/\/(youtu\.be\/|(www\.)?youtube\.com\/(embed|v|shorts)\/)/;
+
+const YOUTUBE_VIDEO_ID_REGEX = /^[a-zA-Z0-9_-]{11}$/;
+
+function extractVideoId(url) {
+  const parsedUrl = new URL(url);
+
+  if (!VALID_YOUTUBE_DOMAINS.has(parsedUrl.hostname) || !VALID_YOUTUBE_URL_REGEX.test(url)) {
+    return false;
+  }
+
+  let videoId = parsedUrl.searchParams.get('v');
+
+  if (!videoId) {
+    const paths = parsedUrl.pathname.split('/');
+    videoId = parsedUrl.hostname === 'youtu.be' ? paths[1] : paths[2];
+  }
+
+  if (!videoId) {
+    return false;
+  }
+
+  if (!YOUTUBE_VIDEO_ID_REGEX.test(videoId)) {
+    return false;
+  }
+
+  return videoId;
 }
