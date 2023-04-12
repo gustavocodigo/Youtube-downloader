@@ -79,6 +79,7 @@ function showVideoInfor(object) {
 document.getElementById("thumbnail-div").style.backgroundImage = 'url('+object.thumbnail+')'
   
   document.getElementById("video-name").innerText = object.name
+  document.getElementById("video-iframe").src = object.videoUrl
 
 }
 
