@@ -108,6 +108,7 @@ function downloadVideo(url) {
 function gotoURL(videoUrl) {
   const a = document.createElement('a');
   a.href = videoUrl;
+  a.target="_blank"
   a.download = 'video.mp4';
   document.body.appendChild(a);
   a.click();
