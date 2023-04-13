@@ -105,9 +105,11 @@ function showVideoInfor(object) {
 document.getElementById("thumbnail-div").style.backgroundImage = 'url('+object.thumbnail+')'
   
   document.getElementById("video-name").innerText = object.name
-  alert(object.audioUrl)
-  document.getElementById("audio-player").src = object.audioUrl
-  alert("under update")
+  const audio = document.getElementById("audio-player")
+  
+  document.getElementById("audio-player-src").src = object.audioUrl
+  
+  audio.load();
 
 }
 
