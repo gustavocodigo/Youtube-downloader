@@ -75,6 +75,7 @@ function search_video(url) {
 
 
 function convertClick() {
+  document.getElementById("audio-player").pause()
    document.getElementById('video-card').style.display = "none"
   let input_url = document.getElementById("id_url").value
   if( validateURL(input_url)) {
@@ -110,6 +111,8 @@ document.getElementById("thumbnail-div").style.backgroundImage = 'url('+object.t
   document.getElementById("audio-player-src").src = object.audioUrl
   
   audio.load();
+  audio.pause()
+   
 
 }
 
