@@ -146,9 +146,7 @@
       >
    
         
-        <div class = "thumbnail-div" id = "thumbnail-div">
-          
-        </div>
+       
         <div
             
           style="display: flex; margin: 10px; flex-direction: column"
@@ -157,33 +155,8 @@
             Video name
           </p>
         
-          <div class="download-button" onclick="downloadClick()">
-            GO TO <b>VIDEO</b>
-           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-play-fill" viewBox="0 0 16 16">
-  <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6 5.883a.5.5 0 0 1 .757-.429l3.528 2.117a.5.5 0 0 1 0 .858l-3.528 2.117a.5.5 0 0 1-.757-.43V5.884z"/>
-</svg>
-              <path
-                d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm-1 4v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 11.293V7.5a.5.5 0 0 1 1 0z"
-              />
-            </svg>
-          </div>
-          
-          <div class="download-button" onclick="downloadClick2()">
-            GO TO <b>AUDIO</b>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentcolor"
-              class="bi bi-file-earmark-arrow-down-fill"
-              viewbox="0 0 16 16"
-            >
-              <path
-                d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm-1 4v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 11.293V7.5a.5.5 0 0 1 1 0z"
-              />
-            </svg>
-          </div>
-        <video style="position: relative;"controls="" autoplay="" name="media"><source src="https://rr3---sn-0aug5oxujx-4vge.googlevideo.com/videoplayback?expire=1681445561&amp;ei=WX44ZNfvLsWd8wTAhJ6oAQ&amp;ip=34.207.165.108&amp;id=o-AGZ4JpUcWmrcxzST7yxhPpey0BtmC4ziB3SjlwSzYEX6&amp;itag=18&amp;source=youtube&amp;requiressl=yes&amp;vprv=1&amp;xtags=heaudio%3Dtrue&amp;mime=video%2Fmp4&amp;ns=e37PBJk7SxxdWWJ-7InOiuMM&amp;cnr=14&amp;ratebypass=yes&amp;dur=196.673&amp;lmt=1666507000219442&amp;fexp=24007246&amp;c=WEB&amp;txp=5538434&amp;n=kIenDmYcmZSas6hiI9p&amp;sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cxtags%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&amp;sig=AOq0QJ8wRAIgaKSKBHxT5beRFIfU3zb1WVuQgeESTAGaCTuAk3HV4GsCIH2OjI8oMB6ADmUaEY6FpMplWlEVQl1Zx1SVXdLVxc2E&amp;redirect_counter=1&amp;rm=sn-p5qee67e&amp;req_id=dbb0d2d5fd77a3ee&amp;cms_redirect=yes&amp;ipbypass=yes&amp;mh=_a&amp;mip=2804:7948:214a:b200:151a:5b40:1f8e:63f9&amp;mm=31&amp;mn=sn-0aug5oxujx-4vge&amp;ms=au&amp;mt=1681423025&amp;mv=m&amp;mvi=3&amp;pl=36&amp;lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&amp;lsig=AG3C_xAwRQIgb0WRlLCnIgUnxpGrvhEO9NEBejU_WaghNxU9FoFZm6wCIQCMGm5yIqgqek9Pz9vw43RmLt-216ioJ72ZNa6NUF9NAg%3D%3D" type="video/mp4"></video>
+
+        <video id="video-player" autoplay="false" style="position: relative;"controls="" autoplay="" name="media"><source id = "video-player-src" src= "https://rr3---sn-0aug5oxujx-4vge.googlevideo.com/videoplayback?expire=1681445561&amp;ei=WX44ZNfvLsWd8wTAhJ6oAQ&amp;ip=34.207.165.108&amp;id=o-AGZ4JpUcWmrcxzST7yxhPpey0BtmC4ziB3SjlwSzYEX6&amp;itag=18&amp;source=youtube&amp;requiressl=yes&amp;vprv=1&amp;xtags=heaudio%3Dtrue&amp;mime=video%2Fmp4&amp;ns=e37PBJk7SxxdWWJ-7InOiuMM&amp;cnr=14&amp;ratebypass=yes&amp;dur=196.673&amp;lmt=1666507000219442&amp;fexp=24007246&amp;c=WEB&amp;txp=5538434&amp;n=kIenDmYcmZSas6hiI9p&amp;sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cxtags%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&amp;sig=AOq0QJ8wRAIgaKSKBHxT5beRFIfU3zb1WVuQgeESTAGaCTuAk3HV4GsCIH2OjI8oMB6ADmUaEY6FpMplWlEVQl1Zx1SVXdLVxc2E&amp;redirect_counter=1&amp;rm=sn-p5qee67e&amp;req_id=dbb0d2d5fd77a3ee&amp;cms_redirect=yes&amp;ipbypass=yes&amp;mh=_a&amp;mip=2804:7948:214a:b200:151a:5b40:1f8e:63f9&amp;mm=31&amp;mn=sn-0aug5oxujx-4vge&amp;ms=au&amp;mt=1681423025&amp;mv=m&amp;mvi=3&amp;pl=36&amp;lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&amp;lsig=AG3C_xAwRQIgb0WRlLCnIgUnxpGrvhEO9NEBejU_WaghNxU9FoFZm6wCIQCMGm5yIqgqek9Pz9vw43RmLt-216ioJ72ZNa6NUF9NAg%3D%3D" type="video/mp4"></video>
           
           <audio controls autoplay="false" name="media" id="audio-player" style="margin: 2px; margin-top: 20px; width: 100%; z-index: 999999999">
             AUDIO

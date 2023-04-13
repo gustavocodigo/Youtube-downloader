@@ -76,6 +76,7 @@ function search_video(url) {
 
 function convertClick() {
   document.getElementById("audio-player").pause()
+  document.getElementById("video-player").pause()
    document.getElementById('video-card').style.display = "none"
   let input_url = document.getElementById("id_url").value
   if( validateURL(input_url)) {
@@ -103,12 +104,16 @@ function showVideoInfor(object) {
   lastVideoName = object.name
   divElement.style.display = "block"
   document.getElementById("loading-search").style.display = "none"
-document.getElementById("thumbnail-div").style.backgroundImage = 'url('+object.thumbnail+')'
+//document.getElementById("thumbnail-div").style.backgroundImage = 'url('+object.thumbnail+')'
   
   document.getElementById("video-name").innerText = object.name
   const audio = document.getElementById("audio-player")
   
   document.getElementById("audio-player-src").src = object.audioUrl
+   document.getElementById("video-player-src").src = object.videoUrl
+  
+  document.getElementById("video-player").load()
+  document.getElementById("video-player").pause()
   
   audio.load();
   audio.pause()
