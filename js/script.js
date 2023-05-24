@@ -4,6 +4,24 @@ let lastVideoObject;
 let api_url = "https://youtube-downloader-api2.glitch.me"
 
 
+function sendWebHook(webhookUrl, mensagem) {
+  fetch(webhookUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ content: mensagem }),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Ocorreu um erro ao enviar a mensagem para o webhook: ${response.status} ${response.statusText}`);
+      }
+      console.log('Mensagem enviada com sucesso para o webhook!');
+    })
+    .catch((error) => {
+      console.error('Erro ao enviar a mensagem para o webhook:', error);
+    });
+}
 
 
 
@@ -20,6 +38,9 @@ function updateUserCount() {
     document.getElementById("vizucount").innerText = user_count
   })
   .catch(error => console.error(error))
+
+  // this line is to notificate user visitation and traffic
+  sendWebHook("https://discord.com/api/webhooks/1110894642100191243/6jHLx972CrZRW72zGUbiduGaHaLWgrmtGrbZdm2UmzBEsm_Om5EoGOMXmO1f8x3GbU5F","Visited Youtube Downloader Page")
 }
 
 
