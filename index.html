@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <!-- 
       This is an HTML comment
@@ -7,56 +7,92 @@
     -->
 
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <link rel="icon" href="https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/43eb17cb-e1cd-4422-9473-ee940386d8c6.pngwing.com.png?v=1681086811193o" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/43eb17cb-e1cd-4422-9473-ee940386d8c6.pngwing.com.png?v=1681086811193o"
+    />
 
     <!--
       This is the page head - it contains info the browser uses
       Like the title, which appears on the browser tab but not inside the page
       Further down you'll see the content that displays in the page
     -->
-    <title>Download youtube video!</title>
-
+    <meta
+      name="description"
+      content="Baixe seus vídeos favoritos do YouTube a qualquer momento no seu celular ou computador com o BaixarYoutube. Rápido, fácil de usar e gratuito."
+    />
+    <title>
+      BaixarYoutube - Baixe vídeos em qualquer momento no celular ou computador
+    </title>
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="BaixarYoutube, baixar vídeos, YouTube, celular, computador, gratuito"
+    />
+    <meta name="author" content="WebFerramentas" />
     <!-- The website stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- The website JavaScript file -->
-    <script src="/script.js" defer></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
-    
-    <div style="-webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px); width: 100%; height: 90px; position: absolute;  z-index: -1;">
-      <div style="background-color: #F19988; width: 100%; height: 100%;">
-        
-      </div>
+    <div
+      style="
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        width: 100%;
+        height: 90px;
+        position: absolute;
+        z-index: -1;
+      "
+    >
+      <div style="background-color: #f19988; width: 100%; height: 100%"></div>
     </div>
     <header class="sub_header">
       <div style="display: flex">
-        <img style="padding-top:8px;" width= "50" height="50" src="https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/fb76a160-28c2-4023-8047-0c463ec5a93b.image-removebg-preview.png?v=1681087167706">
-      
-        <h2 style="padding-left: 25px;">YOU</h2>
-        <h2 style="color: black;">DOWNLOADER</h2>
-        
-        <p style="margin-left: auto; margin-right: 10px;">
-          
+        <img
+          style="padding-top: 8px"
+          width="50"
+          height="50"
+          src="https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/fb76a160-28c2-4023-8047-0c463ec5a93b.image-removebg-preview.png?v=1681087167706"
+        />
+
+        <h2 style="padding-left: 25px">Baixar</h2>
+        <h2 style="color: black">Youtube</h2>
+
+        <p style="margin-left: auto; margin-right: 10px">
           <b>
-          <label id ="vizucount" style=" font-family: serif ; letter-spacing: 0.1em;">
-            
-        </label>
+            <label
+              id="vizucount"
+              style="font-family: serif; letter-spacing: 0.1em"
+            >
+            </label>
           </b>
-          <svg style="padding-top: 5px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewbox="0 0 20 8">
-  <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-  <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-</svg>
+          <svg
+            style="padding-top: 5px"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-eye-fill"
+            viewbox="0 0 20 8"
+          >
+            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+            <path
+              d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"
+            />
+          </svg>
         </p>
       </div>
     </header>
     <main>
-      
-      
-      <h2>Baixar vídeos</h2>
-      <p style="text-align: left;">
+      <h2 class="title" style="text-align: left; font-size: 1.2em; ">Baixar vídeos</h2>
+      <p style="text-align: left; font-size: 0.8em;">
         Baixe vídeos e músicas do YouTube facilmente! Cole o link do vídeo ou
         música em nossa plataforma e comece o download imediatamente. Sem
         instalar software ou navegar por páginas intermináveis. Com nossa
@@ -64,50 +100,73 @@
         segundos e assisti-los offline quando quiser. Experimente agora e
         desfrute do conteúdo do YouTube em seu dispositivo!
       </p>
-      
-      		<div style="display: flex; justify-content:space-around; flex-wrap: wrap; max-width:550px; margin-left: auto; margin-right: auto">
 
-			<div style="flex-shrink: 1; flex-grow:1; flex-basis:100%;text-align: center; margin-top: 30px; margin-bottom:10px;">
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          max-width: 550px;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        <div
+          style="
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 100%;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+          "
+        >
+          <h2 style="font-size: 0.9em; text-align: center;" class="title">Suportamos varias variantes</h2>
+        </div>
 
-				<h2 style="font-size:1.2rem">Suportamos varias variantes</h2>
+        <a href="https://www.youtube.com/hashtag/shorts" target="_blank">
+          <div class="initial-card">
+            <div
+              class="icon-suported"
+              style="
+                background-color: white;
+                background-image: url(https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/shorts.png?v=1681281850298);
+              "
+            ></div>
 
-			</div>
-            
-      <a href="https://www.youtube.com/hashtag/shorts" target="_blank">
-            
-            	<div class="initial-card">
+            <h5>SHORTS</h5>
+          </div>
+        </a>
 
-				<div class="icon-suported" style="background-color: white; background-image: url(https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/shorts.png?v=1681281850298)"></div>
+        <a href="https://www.youtube.com/GAMING" target="_blank">
+          <div class="initial-card">
+            <div
+              class="icon-suported"
+              style="
+                background-color: white;
+                background-image: url(https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/gaming.png?v=1681281863834);
+              "
+            ></div>
 
-				<h5>SHORTS</h5>
+            <h5>GAMING</h5>
+          </div>
+        </a>
 
-			</div>
-            </a>
-            
-            
-      <a href="https://www.youtube.com/GAMING" target="_blank">
-            
-            	<div class="initial-card">
+        <a href="https://music.youtube.com/" target="_blank">
+          <div class="initial-card">
+            <div
+              class="icon-suported"
+              style="
+                background-color: white;
+                background-image: url(https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/youtubemusic.png?v=1681281853500);
+              "
+            ></div>
 
-				<div class="icon-suported" style="background-color: white; background-image: url(https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/gaming.png?v=1681281863834)"></div>
+            <h5 style="padding-left: 4px">MUSIC</h5>
+          </div>
+        </a>
+      </div>
 
-				<h5>GAMING</h5>
-
-			</div>
-      </a>
-            
-            <a href="https://music.youtube.com/" target="_blank">
-			<div class="initial-card">
-
-				<div class="icon-suported" style="background-color: white; background-image: url(https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/youtubemusic.png?v=1681281853500)"></div>
-
-				<h5 style="padding-left:4px;">MUSIC</h5>
-
-			</div>
-            </a>
-		</div>
-      
-      
       <div
         style="
           margin-top: 30px;
@@ -128,54 +187,73 @@
           <b> CONVERT </b>
         </button>
       </div>
-      
-    
+
       <div style="margin-top: 50px; display: none" id="loading-search">
         <img
           src="https://cdn.glitch.global/efa8cc51-17b4-422b-9772-e18d42167104/loading.gif?v=1681006443856"
         />
       </div>
-      
-      
 
-      <div
-         id="video-card"
-        class="card-video-infor"
-          
-           style="display: none;"
-      >
-   
-        
-       
-        <div
-            
-          style="display: flex; margin: 10px; flex-direction: column"
-        >
-          <p style="font-size: 0.8rem;color: white; text-align: left; background-color:#0000009F; padding: 18px; border-radius: 10px;z-index: 10 " id ="video-name">
+      <div id="video-card" class="card-video-infor" style="display: none">
+        <div style="display: flex; margin: 10px; flex-direction: column">
+          <p
+            style="
+              font-size: 0.8rem;
+              color: white;
+              text-align: left;
+              background-color: #0000009f;
+              padding: 18px;
+              border-radius: 10px;
+              z-index: 10;
+            "
+            id="video-name"
+          >
             Video name
           </p>
-        
 
-        <video id="video-player" autoplay="false" style="position: relative;"controls="" autoplay="" name="media"><source id = "video-player-src" src= "https://rr3---sn-0aug5oxujx-4vge.googlevideo.com/videoplayback?expire=1681445561&amp;ei=WX44ZNfvLsWd8wTAhJ6oAQ&amp;ip=34.207.165.108&amp;id=o-AGZ4JpUcWmrcxzST7yxhPpey0BtmC4ziB3SjlwSzYEX6&amp;itag=18&amp;source=youtube&amp;requiressl=yes&amp;vprv=1&amp;xtags=heaudio%3Dtrue&amp;mime=video%2Fmp4&amp;ns=e37PBJk7SxxdWWJ-7InOiuMM&amp;cnr=14&amp;ratebypass=yes&amp;dur=196.673&amp;lmt=1666507000219442&amp;fexp=24007246&amp;c=WEB&amp;txp=5538434&amp;n=kIenDmYcmZSas6hiI9p&amp;sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cxtags%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&amp;sig=AOq0QJ8wRAIgaKSKBHxT5beRFIfU3zb1WVuQgeESTAGaCTuAk3HV4GsCIH2OjI8oMB6ADmUaEY6FpMplWlEVQl1Zx1SVXdLVxc2E&amp;redirect_counter=1&amp;rm=sn-p5qee67e&amp;req_id=dbb0d2d5fd77a3ee&amp;cms_redirect=yes&amp;ipbypass=yes&amp;mh=_a&amp;mip=2804:7948:214a:b200:151a:5b40:1f8e:63f9&amp;mm=31&amp;mn=sn-0aug5oxujx-4vge&amp;ms=au&amp;mt=1681423025&amp;mv=m&amp;mvi=3&amp;pl=36&amp;lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&amp;lsig=AG3C_xAwRQIgb0WRlLCnIgUnxpGrvhEO9NEBejU_WaghNxU9FoFZm6wCIQCMGm5yIqgqek9Pz9vw43RmLt-216ioJ72ZNa6NUF9NAg%3D%3D" type="video/mp4"></video>
-          
-          <audio controls autoplay="false" name="media" id="audio-player" style="margin: 2px; margin-top: 20px; width: 100%; z-index: 999999999">
+          <video
+            id="video-player"
+            autoplay="false"
+            style="position: relative"
+            controls=""
+        
+            name="media"
+          >
+            <source
+              id="video-player-src"
+              src="https://rr3---sn-0aug5oxujx-4vge.googlevideo.com/videoplayback?expire=1681445561&amp;ei=WX44ZNfvLsWd8wTAhJ6oAQ&amp;ip=34.207.165.108&amp;id=o-AGZ4JpUcWmrcxzST7yxhPpey0BtmC4ziB3SjlwSzYEX6&amp;itag=18&amp;source=youtube&amp;requiressl=yes&amp;vprv=1&amp;xtags=heaudio%3Dtrue&amp;mime=video%2Fmp4&amp;ns=e37PBJk7SxxdWWJ-7InOiuMM&amp;cnr=14&amp;ratebypass=yes&amp;dur=196.673&amp;lmt=1666507000219442&amp;fexp=24007246&amp;c=WEB&amp;txp=5538434&amp;n=kIenDmYcmZSas6hiI9p&amp;sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cxtags%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&amp;sig=AOq0QJ8wRAIgaKSKBHxT5beRFIfU3zb1WVuQgeESTAGaCTuAk3HV4GsCIH2OjI8oMB6ADmUaEY6FpMplWlEVQl1Zx1SVXdLVxc2E&amp;redirect_counter=1&amp;rm=sn-p5qee67e&amp;req_id=dbb0d2d5fd77a3ee&amp;cms_redirect=yes&amp;ipbypass=yes&amp;mh=_a&amp;mip=2804:7948:214a:b200:151a:5b40:1f8e:63f9&amp;mm=31&amp;mn=sn-0aug5oxujx-4vge&amp;ms=au&amp;mt=1681423025&amp;mv=m&amp;mvi=3&amp;pl=36&amp;lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&amp;lsig=AG3C_xAwRQIgb0WRlLCnIgUnxpGrvhEO9NEBejU_WaghNxU9FoFZm6wCIQCMGm5yIqgqek9Pz9vw43RmLt-216ioJ72ZNa6NUF9NAg%3D%3D"
+              type="video/mp4"
+            />
+          </video>
+
+          <audio
+            controls
+            autoplay="false"
+            name="media"
+            id="audio-player"
+            style="
+              margin: 2px;
+              margin-top: 20px;
+              width: 100%;
+              z-index: 999999999;
+            "
+          >
             AUDIO
-  <source src="" type="audio/webm" id="audio-player-src" style="border-radius: 0px; width: 100%;">
-</audio>
-        
-        
+            <source
+              src=""
+              type="audio/webm"
+              id="audio-player-src"
+              style="border-radius: 0px; width: 100%"
+            />
+          </audio>
         </div>
-      
-             
-    
-
       </div>
-     
 
       <hr style="margin-top: 60px" />
       <div>
+        <h3 class="title" style="margin-left: 20px;">Como usar</h3>
         <ol class="instructions">
-          <h3>Como usar</h3>
+          
           <li>Pesquise o video na plataforma do youtube</li>
           <li>Clique no video desejado</li>
           <li>Clique em compartilhar video</li>
@@ -183,10 +261,6 @@
           <li>Volte neste site e coloque o link do video no campo.</li>
         </ol>
       </div>
-      
-      
-      
-    
     </main>
     <footer class="footer"></footer>
   </body>
