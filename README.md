@@ -1,6 +1,6 @@
 # Youtube-downloader
 
-Uma aplicação para baixar videos ou audio do youtube de forma rapid
+Uma aplicação para baixar videos ou audio do youtube de forma rapida
 
 esssa aplicação foi desenvolvida com HTML CSS JAVASCRIPT e um toque de NODEJS para a api
 
