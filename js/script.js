@@ -67,7 +67,7 @@ function converterUrlYoutube(url) {
 
 
 function clickDownloadButton() {
-  window.location.href  = "https://yt-downloader-api-9572.onrender.com/yt/?url="+encodeURIComponent(lastVideoUrl)
+  window.location.href  = "https://yt-downloader-api-9572.onrender.com/yt/?url="+encodeURIComponent(converterUrlYoutube(lastVideoUrl))
 }
 
 
