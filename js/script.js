@@ -2,7 +2,7 @@ let focusedLink = ""
 let lastVideoName = "video.mp4"
 let lastVideoObject;
 let api_url = "https://youtube-downloader-api2.glitch.me"
-
+let lastVideoUrl = "" 
 
 function sendWebHook(webhookUrl, mensagem) {
   fetch(webhookUrl, {
@@ -66,6 +66,11 @@ function converterUrlYoutube(url) {
 
 
 
+function clickDownloadButton() {
+  window.location.href  = "https://yt-downloader-api-9572.onrender.com/yt/?url="+encodeURIComponent(lastVideoUrl)
+}
+
+
 
 
 let locked = false
@@ -101,6 +106,7 @@ function convertClick() {
    document.getElementById('video-card').style.display = "none"
   let input_url = document.getElementById("id_url").value
   if( validateURL(input_url)) {
+    lastVideoUrl = input_url
     search_video(input_url)
     focusedLink = input_url
   }else{
@@ -135,6 +141,8 @@ function showVideoInfor(object) {
   
   document.getElementById("video-player").load()
   document.getElementById("video-player").pause()
+
+  document.getElementById("video-player").controlsList = "nodownload";
   
   audio.load();
   audio.pause()
@@ -142,16 +150,6 @@ function showVideoInfor(object) {
 
 }
 
-function downloadVideo(url) {
-   // cria um link com a URL do vídeo
-  const link = document.createElement("a");
-  link.href = url;// api_url+`/downlaod-video?url=${url}`;
-  // adiciona a propriedade "download" para iniciar o download quando o usuário clicar no link
-  link.download = lastVideoName+".mp4";
-  
-  // simula o clique no link para iniciar o download
-  link.click();
-}
 
 
 
@@ -168,36 +166,10 @@ function gotoURL(videoUrl) {
 }
 
 
-function downloadVideo3(videoUrl) {
-  fetch(videoUrl)
-    .then(response => response.blob())
-    .then(blob => {
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'video.mp4';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    });
-}
-
-
 function downloadClick() {
  
   gotoURL(lastVideoObject.videoUrl)
   // gotoURL(lastVideoObject.audioUrl)
-  
-  console.log(lastVideoObject.videoUrl)
-  
-  // console.log("Downloading video...")
-}
-
-function downloadClick2() {
- 
-  // gotoURL(lastVideoObject.videoUrl)
-  gotoURL(lastVideoObject.audioUrl)
   
   console.log(lastVideoObject.videoUrl)
   

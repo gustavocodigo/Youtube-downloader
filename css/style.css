@@ -246,3 +246,22 @@ a:focus, a:active {
 
 
 
+
+
+
+
+.download-button {
+  background-color:#fe523f;
+  border-radius: 12px;
+  padding: 12px; 
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-radius: 0px;
+  width: 100%;
+  justify-content: center;
+}
