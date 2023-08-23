@@ -142,7 +142,6 @@ function showVideoInfor(object) {
   document.getElementById("video-player").load()
   document.getElementById("video-player").pause()
 
-  document.getElementById("video-player").controlsList = "nodownload";
   
   audio.load();
   audio.pause()
